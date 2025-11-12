@@ -19,7 +19,7 @@ const db = mysql.createConnection({
   database: 'supercomputers_db',
   port: 19006,
   ssl: {
-    rejectUnauthorized: true
+    rejectUnauthorized: false
   }
 });
 
@@ -169,3 +169,4 @@ app.get('/api/track', (req, res) => {
 // =======================
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
